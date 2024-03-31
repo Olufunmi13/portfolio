@@ -25,10 +25,7 @@ const Contact = () => {
     e.preventDefault();
     if (isFormValid) {
       const config = {
-        Username: "helloolufunke@gmail.com",
-        Password: "739821D6E3B0AB937D996D46DDB62F7DF2C8",
-        Host: "smtp.elasticemail.com",
-        Port: "2525",
+        SecureToken: "d2b03607-200d-4f29-8533-c0fcfbd5d237",
         To:formState.email,
         From: "helloolufunke@gmail.com",
         Subject: "This is from your Contact Form",
@@ -55,13 +52,6 @@ const Contact = () => {
       <Heading title={"Contact "} primaryTitle={"Me"} />
       <p className="mx-10 md:mx-20 md:w-4/5">
       I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
-        {/* Get in touch or shoot me an email directly on{" "}
-        <a
-          href="mailto:helloolufunke@gmail.com?subject=Hello&body=Hi,%20I%20want%20to%20contact%20you."
-          className="no-underline text-[var(--color-primary)]"
-        >
-          <b>helloolufunke@gmail.com</b>
-        </a> */}
       </p>
       <form
         method="post"
