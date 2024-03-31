@@ -117,7 +117,7 @@ img {
   margin-right: auto;
 }
 .navLinks {
-  @apply fixed inset-0 w-full -left-full px-[60px] py-[60px] bg-[var(--color-light)] transition-[var(--trasition)] z-[1000];
+  @apply fixed inset-0 w-3/4 -left-full px-[60px] py-[60px] bg-[var(--color-light)] transition-[var(--trasition)] z-[1000];
 }
 .navLinks-show {
   @apply left-0 
@@ -164,6 +164,44 @@ img {
 .navlinksActive h3 {
   color: var(--color-primary);
 }
+
+.pulse:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  } 
+
 @media (max-width: 1024px) {
   .container {
     width: 90% !important;
@@ -223,6 +261,7 @@ img {
   .nav-link:hover h3 {
     color: var(--color-primary);
     transform: scale(1.1);
+    padding-right: 8px;
   }
   .navlinksActive span {
     color: white;

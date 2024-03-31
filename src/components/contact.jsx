@@ -1,3 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXTwitter,
+  faLinkedinIn,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import "../App.css";
 import Heading from "./customheading";
@@ -20,34 +26,34 @@ const Contact = () => {
     const isValid = emailRegex.test(formState.email);
     setIsFormValid(isValid && formState.name && formState.message);
   };
-  let body =`
+  let body = `
   <b>FullName</b>: ${formState.name}<br>
   <b>Email</b>: ${formState.email}<br>
   <b>Message</b>: ${formState.message}
-  ` 
-    
+  `;
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (isFormValid) {
       const config = {
         SecureToken: "d2b03607-200d-4f29-8533-c0fcfbd5d237",
-        To:"helloolufunke@gmail.com" ,
-        From:"helloolufunke@gmail.com" ,
+        To: "helloolufunke@gmail.com",
+        From: "helloolufunke@gmail.com",
         Subject: "This is from your Contact Form",
         Body: body,
       };
       if (window.Email) {
-        window.Email.send(config).then(() => {
-          alert("message sent successfully");
-        }
-        ,setFormState({
-          name: '',
-          email: '',
-          message: '',
-        })
+        window.Email.send(config).then(
+          () => {
+            alert("message sent successfully");
+          },
+          setFormState({
+            name: "",
+            email: "",
+            message: "",
+          })
         );
       }
-      
     }
   };
 
@@ -55,7 +61,8 @@ const Contact = () => {
     <section className="container">
       <Heading title={"Contact "} primaryTitle={"Me"} />
       <p className="mx-10 md:mx-20 md:w-4/5">
-      I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
+        I would love to hear about your project and how I could help. Please
+        fill in the form, and I’ll get back to you as soon as possible.
       </p>
       <form
         method="post"
@@ -71,7 +78,12 @@ const Contact = () => {
           onChange={changeHandler}
           value={formState.name || ""}
         />
-        <span><i className="text-[#9ca3af]"> Please endeavour to input a valid email</i></span>
+        <span>
+          <i className="text-[#9ca3af]">
+            {" "}
+            Please endeavour to input a valid email
+          </i>
+        </span>
         <input
           type="email"
           name="email"
@@ -91,11 +103,24 @@ const Contact = () => {
         <button
           type="submit"
           disabled={!isFormValid} // Disable the button if the form is not valid
-          className={`bg-[var(--color-primary)] w-1/5 rounded text-[var(--color-white)] p-2 hover:text-[var(--color-primary)] hover:bg-white hover:border-2 ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`bg-[var(--color-primary)] w-1/5 rounded text-[var(--color-white)] p-2 hover:text-[var(--color-primary)] hover:bg-white hover:border-2 ${
+            !isFormValid ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         >
           Send
         </button>
       </form>
+      <div className="flex gap-2 pt-4">
+        <a className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://www.linkedin.com/in/Olufunke-Oluwatuyi-8248141a1/" target="_blank">
+         <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+        <a className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://twitter.com/funmike_os" target="_blank">
+          <FontAwesomeIcon icon={faXTwitter} />
+        </a>
+        <a  className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://github.com/Olufunmi13" target="_blank">
+         <FontAwesomeIcon icon={faGithub} />
+        </a>
+      </div>
     </section>
   );
 };
