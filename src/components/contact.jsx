@@ -37,8 +37,8 @@ const Contact = () => {
         Body: body,
       };
       if (window.Email) {
-        window.Email.send(config).then((message) => {
-          alert(message);
+        window.Email.send(config).then(() => {
+          alert("message sent successfully");
         }
         ,setFormState({
           name: '',
