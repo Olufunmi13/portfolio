@@ -1,23 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Link } from "react-router-dom";
+import { about } from "../Data";
 import "../App.css";
 import Heading from "./customheading";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Tools from "./tools";
 
-export default function about() {
+export default function About() {
+  const { img } = about;
   return (
     <section className="container ">
       <Heading title={"About "} primaryTitle={"Me"} />
       <div className="flex flex-col  md:flex-row">
         <div>
           <img
-            src="src\assets\oluwatuyi.jpg"
+            src={img}
             alt="profile"
             className="w-full md:mx-5 rounded shadow-2xl"
           />
         </div>
-        <div className=" mt-7 mx-5 font-display md:p-5 md:mt-16 md:mx-14">
+        <div className=" mt-7 mx-5 font-display md:p-5 md:mt-16 md:mx-14 flex flex-col">
           <p className="md:w-4/5">
             I translate ideas into impactful digital experiences. With a passion
             for exquisite design and user-centric journeys, I craft clean,

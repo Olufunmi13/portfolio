@@ -34,6 +34,14 @@ export const navLinks = [
     
 ];
 
+
+
+import aboutImage from '../src/assets/oluwatuyi.jpg'
+export const about = {
+    img: aboutImage
+}
+
+
 import image1 from '../src/assets/html.png'
 import image2 from '../src/assets/react.png'
 import image3 from '../src/assets/download.png'
