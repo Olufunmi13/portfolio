@@ -20,19 +20,23 @@ const Contact = () => {
     const isValid = emailRegex.test(formState.email);
     setIsFormValid(isValid && formState.name && formState.message);
   };
-
+  let body =`
+  <b>FullName</b>: ${formState.name}<br>
+  <b>Email</b>: ${formState.email}<br>
+  <b>Message</b>: ${formState.message}
+  ` 
+    
   const submitHandler = (e) => {
     e.preventDefault();
     if (isFormValid) {
       const config = {
         SecureToken: "d2b03607-200d-4f29-8533-c0fcfbd5d237",
-        To:formState.email,
-        From: "helloolufunke@gmail.com",
+        To:"helloolufunke@gmail.com" ,
+        From:"helloolufunke@gmail.com" ,
         Subject: "This is from your Contact Form",
-        Body: `${formState.name} has sent you a message from your portfolio. Here is the message: ${formState.message}`,
+        Body: body,
       };
       if (window.Email) {
-        console.log(window.Email);
         window.Email.send(config).then((message) => {
           alert(message);
         }
