@@ -1,0 +1,234 @@
+:root {
+  --color-primary: #ff6d00;
+  --color-white: #fefcfb;
+  --color-light: hsl(0, 0%, 90%);
+  --color-lightEx: hsl(0, 0%, 80%);
+  --color-body: hsl(0, 0%, 100%);
+  --color-dark: hsl(0, 0%, 40%);
+  color-scheme: light dark;
+  --transition: 0.4s ease;
+}
+
+.dark-theme {
+  --color-body: hsl(231, 39%, 10%);
+  --color-dark: hsl(0, 0%, 100%);
+  --color-light: hsl(0, 0%, 10%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+body {
+  background: var(--color-body);
+  color: var(--color-dark);
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+h1 span {
+  color: var(--color-primary);
+}
+h3 {
+  font-size: 1.3rem;
+}
+p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.btn {
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid var(--color-primary);
+  padding: 15px 70px 15px 35px;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.btn span {
+  position: absolute;
+  width: 52px;
+  background: var(--color-primary);
+  height: 100%;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  transition: var(--transition);
+}
+.btn::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: var(--color-primary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: var(--transition);
+}
+.btn:hover::before {
+  width: 100%;
+}
+.btn:hover {
+  color: white;
+}
+.btn:hover span {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+.container {
+  width: 90% !important;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navLinks {
+  @apply fixed inset-0 w-full -left-full px-[60px] py-[60px] bg-[var(--color-light)] transition-[var(--trasition)] z-[1000];
+}
+.navLinks-show {
+  @apply left-0 
+  transition-[var(--trasition)];
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 14px;
+  color: var(--color-dark);
+}
+.nav-link span {
+  font-size: 1.1rem;
+}
+.nav-toggle {
+  position: fixed;
+  top: 2.5rem;
+  right: 5%;
+  width: 24px;
+  z-index: 12;
+  cursor: pointer;
+}
+.nav-toggle span {
+  width: 100%;
+  display: block;
+  height: 2px;
+  background: var(--color-dark);
+  margin-bottom: 5px;
+  transition: var(--transition);
+}
+.nav-close span:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 6px);
+}
+.nav-close span:nth-child(2) {
+  display: none;
+}
+.nav-close span:nth-child(3) {
+  transform: rotate(-45deg) translate(-1px, -2px);
+}
+.navlinksActive span {
+  color: var(--color-primary);
+}
+.navlinksActive h3 {
+  color: var(--color-primary);
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 90% !important;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+ 
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: fixed;
+    right: 3%;
+    z-index: 100;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .navLinks {
+    position: relative;
+    background: transparent;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+  }
+  .nav-link {
+    border: transparent;
+    flex-direction: row-reverse;
+    padding-block: 0;
+    gap: 0;
+    margin: 0.5rem 0;
+  }
+  .nav-link span {
+    background: var(--color-light);
+    border-radius: 50%;
+    padding: 0.8rem;
+    display: flex;
+    gap: 5px;
+    transition: var(--transition);
+  }
+  .nav-link:hover span {
+    color: white;
+    background: var(--color-primary);
+  }
+  .nav-link h3 {
+    transform: scale(0);
+    transition: var(--transition);
+  }
+  .nav-link:hover h3 {
+    color: var(--color-primary);
+    transform: scale(1.1);
+  }
+  .navlinksActive span {
+    color: white;
+    background: var(--color-primary);
+  }
+  .navlinksActive h3 {
+    transform: scale(0.8);
+  }
+}
