@@ -111,13 +111,14 @@ const Contact = () => {
         </button>
       </form>
       <div className="flex gap-2 pt-4">
-        <a className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://www.linkedin.com/in/Olufunke-Oluwatuyi-8248141a1/" target="_blank">
+        <a className="hover:bg-[var(--color-primary)] 
+         border-[var(--color-primary)] rounded-full border-2 p-2" href="https://www.linkedin.com/in/Olufunke-Oluwatuyi-8248141a1/" target="_blank">
          <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
-        <a className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://twitter.com/funmike_os" target="_blank">
+        <a className="hover:bg-[var(--color-primary)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://twitter.com/funmike_os" target="_blank">
           <FontAwesomeIcon icon={faXTwitter} />
         </a>
-        <a  className="hover:bg-[var(--color-primary)] bg-[var(--color-white)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://github.com/Olufunmi13" target="_blank">
+        <a  className="hover:bg-[var(--color-primary)] border-[var(--color-primary)] rounded-full border-2 p-2" href="https://github.com/Olufunmi13" target="_blank">
          <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
