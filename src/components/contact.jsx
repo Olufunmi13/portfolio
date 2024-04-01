@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <section className="container">
       <Heading title={"Contact "} primaryTitle={"Me"} />
-      <p className="mx-10 md:mx-20 md:w-4/5">
+      <p className="mx-10 md:mx-20 md:w-4/5 text-center">
         I would love to hear about your project and how I could help. Please
         fill in the form, and I’ll get back to you as soon as possible.
       </p>
