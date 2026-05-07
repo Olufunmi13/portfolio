@@ -30,7 +30,7 @@ export default function About() {
             team building innovative digital products.
           </p>
           <b>Let&apos;s collaborate and turn your vision into reality.</b>
-          <a href="" download className="btn ">
+          <a href="/resume.pdf" download="Oluwatuyi_Olufunke_Resume.pdf" className="btn ">
             Download CV{" "}
             <span>
               <FontAwesomeIcon icon={faDownload} />

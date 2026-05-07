@@ -102,24 +102,24 @@ export const blogs = [
     }
 ];
 
-import portfoliImg1 from '../src/assets/icodeonline.png';
-import portfoliImg2 from '../src/assets/chatatapp.png';
+import portfoliImg1 from '../src/assets/innovatehealthafrica.png';
+import portfoliImg2 from '../src/assets/inkbookingtattooer.png';
 
 export const portfolio = [
     {
         id: 1,
         img: portfoliImg1,
-        name: 'Online Code Editor',
-        desc: 'An online code editor that can compile and execute code in 40+ different languages, as well as several themes of your choice',
-        tag: "React, Sass, JudgeO, monaco ",
-        site:'https://icodeonline.netlify.com/',
+        name: 'Innovate Health Africa',
+        desc: 'InnovateHealth Africa is a healthcare platform that provides a range of services to improve healthcare outcomes in Africa.',
+        tag: "React, Tailwind CSS, Firebase",
+        site:'https://innovatehealth.africa/',
     },
     {
         id: 2,
         img: portfoliImg2,
-        name: 'Chat App',
-        desc: 'A one-room chat application where you get real-time messages. This is a web application that allows multiple users to have a private chat and it is fast and easy to use.',
-        tag:"React, Tailwind CSS, Firebase",
-        site:'https://chatatapp.netlify.app/',
+        name: 'Ink Booking Tattoer',
+        desc: 'Ink Booking Tattoer is a web application that allows users to book appointments with tattoo artists. It is a one-room chat application where you get real-time messages.',
+        tag:"Next, TypeScript, Supabase, Cal.com, ShadcnUI",
+        site:'https://www.inkbookingtattoer.com/',
     }
 ];
