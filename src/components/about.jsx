@@ -15,7 +15,7 @@ export default function About() {
           <img
             src={img}
             alt="profile"
-            className=" mt-7 w-full md:mx-5 rounded shadow-2xl h-3/4"
+            className=" mt-7 w-full md:mx-5 rounded shadow-2xl h-3/4 object-cover object-center"
           />
         </div>
         <div className=" mt-7 mx-5 font-display md:p-5 md:mt-16 md:mx-14 flex flex-col">
