@@ -27,9 +27,9 @@ export default function Project() {
                 <div className="w-full md:w-6/12 md:ml-12">
                     <h3 className="text-[var(--color-primary)] text-xl md:text-2xl uppercase mb-4 mt-0 font-bold text-nowrap"><a href={item.site} target="_blank" className=" text-inherit no-underline">{item.name}</a> </h3>
                   <p className="text-base md:text-2xl mx-0 my-2">{item.desc}</p>
-                  <ul className="flex gap-5 m-0 py-4 list-disc list-inside sm:p-4">
+                  <ul className="flex flex-wrap gap-x-5 gap-y-2 m-0 py-4 list-disc list-inside sm:p-4">
                     {item.tag.split(", ").map((tag, index) => {
-                      return <li key={index} className="uppercase text-xs !list-item ">{tag}</li>;
+                      return <li key={index} className="uppercase text-xs !list-item whitespace-nowrap">{tag}</li>;
                     })}
                   </ul>
                   <button className="inline-block border-2  border-solid border-[#ececeb] bg-transparent uppercase text-sm px-[1.5em]

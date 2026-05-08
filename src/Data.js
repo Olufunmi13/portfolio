@@ -36,7 +36,7 @@ export const navLinks = [
 
 
 
-import aboutImage from '../src/assets/oluwatuyi.jpg'
+import aboutImage from '../src/assets/Oluwatuyi.jpeg'
 export const about = {
     img: aboutImage
 }
