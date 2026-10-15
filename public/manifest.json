@@ -1,0 +1,24 @@
+{
+  "name": "Olufunke Oluwatuyi — Frontend Developer",
+  "short_name": "Olufunke",
+  "description": "A frontend developer making the internet work, one thoughtful experience at a time.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f0e8",
+  "theme_color": "#c8f169",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Oluwatuyi.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Oluwatuyi.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
