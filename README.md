@@ -1,4 +1,4 @@
-# Funke Oluwatuyi — Portfolio
+# Olufunke Oluwatuyi — Portfolio
 
 A responsive editorial-style frontend developer portfolio built with Next.js, React, TypeScript, and CSS.
 
@@ -7,7 +7,7 @@ A responsive editorial-style frontend developer portfolio built with Next.js, Re
 1. Install Node.js (18.18+ recommended).
 2. Run `npm install`.
 3. Run `npm run dev`.
-4. Open `http://localhost:3000`.
+
 
 ## Project visuals
 
